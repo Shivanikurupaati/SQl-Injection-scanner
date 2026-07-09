@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar { background-color: #2c3e50; padding: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display:flex; justify-content: space-between; align-items:center; height:60px; }
+.logo { color:#fff; font-size:20px; font-weight:bold; }
+.nav-links { display:flex; list-style:none; gap:24px; }
+.nav-links a { color:#ecf0f1; text-decoration:none; padding:8px 12px; border-radius:6px; }
+.nav-links a.active, .nav-links a:hover { background:#667eea; color:#fff; }
+
+.container { max-width: 1000px; margin: 40px auto; padding: 20px; color:#fff; }
+.container h2 { font-size: 32px; margin-bottom: 15px; }
+.content { background: rgba(255,255,255,0.95); color:#2c3e50; padding: 24px; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.15); }
+.content p { margin-bottom: 12px; line-height:1.6; }
+.content ul { margin-left: 18px; margin-bottom: 12px; }
+.buttons { margin-top: 20px; display:flex; gap:10px; }
+.btn { padding:10px 18px; border:none; border-radius:6px; cursor:pointer; font-weight:600; }
+.btn-primary { background:#667eea; color:#fff; }
+.btn-secondary { background:#95a5a6; color:#fff; }
+
+.footer { background:#2c3e50; color:#ecf0f1; text-align:center; padding:14px; margin-top:auto; }
+
+@media (max-width:768px) { .nav-links { gap:10px; } .content{padding:16px;} .buttons{flex-direction:column;} }
+
+/* Nav link pop-up hover effect */
+.nav-links a {
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    transform-origin: center;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.nav-links a.active {
+    transform: translateY(-4px) scale(1.03);
+}
+

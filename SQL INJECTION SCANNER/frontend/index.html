@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">SQL Injection Scanner</h1>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('scanner')">Scanner</a></li>
+                <li><a href="#" onclick="showPage('results')">Results</a></li>
+                <li><a href="#" onclick="showPage('history')">History</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <h2>Welcome to SQL Injection Scanner</h2>
+            <p>A powerful tool to detect and analyze SQL injection vulnerabilities in your queries.</p>
+            <div class="home-content">
+                <p>This application helps developers and security professionals identify potential SQL injection vulnerabilities in their database queries.</p>
+                <button class="btn btn-primary" onclick="showPage('scanner')">Start Scanning</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scanner Page -->
+    <div id="scanner" class="page">
+        <div class="container">
+            <h2>SQL Query Scanner</h2>
+            <div class="scanner-form">
+                <label for="sqlInput">Enter your SQL Query:</label>
+                <textarea id="sqlInput" placeholder="Enter your SQL query here..." rows="8"></textarea>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="scanQuery()">Scan Query</button>
+                    <button class="btn btn-secondary" onclick="clearInput()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results" class="page">
+        <div class="container">
+            <h2>Scan Results</h2>
+            <div class="results-container">
+                <div class="results-placeholder">
+                    <p>No results to display yet. Run a scan from the Scanner page.</p>
+                </div>
+                <button class="btn btn-primary" onclick="showPage('scanner')">Back to Scanner</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Page -->
+    <div id="history" class="page">
+        <div class="container">
+            <h2>Scan History</h2>
+            <div class="history-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Query</th>
+                            <th>Result</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="empty-message">No scan history yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-secondary" onclick="clearHistory()">Clear History</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="container">
+            <h2>About SQL Injection Scanner</h2>
+            <div class="about-content">
+                <h3>What is SQL Injection?</h3>
+                <p>SQL Injection is a code injection technique that might destroy your database. It is one of the most common web hacking techniques.</p>
+                
+                <h3>How does this scanner work?</h3>
+                <p>Our scanner analyzes SQL queries to identify potential vulnerabilities and security risks.</p>
+                
+                <h3>Features</h3>
+                <ul>
+                    <li>Real-time query analysis</li>
+                    <li>Detailed vulnerability reports</li>
+                    <li>Scan history tracking</li>
+                    <li>Security recommendations</li>
+                </ul>
+
+                <h3>Support & Documentation</h3>
+                <button class="btn btn-primary" onclick="alert('Support page - Coming soon!')">View Documentation</button>
+                <button class="btn btn-primary" onclick="alert('Contact us - Coming soon!')">Contact Support</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 SQL Injection Scanner. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

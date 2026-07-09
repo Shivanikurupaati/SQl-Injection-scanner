@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Scanner - Results</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">SQL Injection Scanner</h1>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="results.html" class="active">Results</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="results-header">
+            <h2>Scan Results</h2>
+            <p>Detailed vulnerability analysis for your scanned URLs</p>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters-section">
+            <div class="filter-group">
+                <label for="filterStatus">Filter by Status:</label>
+                <select id="filterStatus" onchange="filterResults()">
+                    <option value="">All</option>
+                    <option value="vulnerable">Vulnerable</option>
+                    <option value="safe">Safe</option>
+                    <option value="warning">Warning</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Results Display -->
+        <div id="resultsContainer" class="results-container">
+            <div class="empty-state">
+                <p>No scan results available yet.</p>
+                <p>Go to <a href="home.html">Home</a> and scan some URLs to see results here.</p>
+            </div>
+        </div>
+
+        <!-- Result Details Modal (Hidden by default) -->
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Vulnerability Details</h3>
+                <div id="modalBody" class="modal-body">
+                    <!-- Details will be populated here -->
+                </div>
+                <button class="btn btn-primary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Section -->
+    <div class="export-section">
+        <button class="btn btn-export" onclick="exportResults()">Export Results</button>
+        <button class="btn btn-back" onclick="goHome()">Back to Home</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 SQL Injection Scanner. All rights reserved.</p>
+    </footer>
+
+    <script src="results.js"></script>
+</body>
+</html>

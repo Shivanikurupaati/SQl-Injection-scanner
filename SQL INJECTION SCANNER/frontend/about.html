@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Scanner - About</title>
+    <link rel="stylesheet" href="about.css">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">SQL Injection Scanner</h1>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>About SQL Injection Scanner</h2>
+        <div class="content">
+            <p>This tool helps developers and security analysts discover potential SQL injection vulnerabilities in web application endpoints and database queries. The frontend currently provides a simple workflow for adding URLs, scanning them (placeholder), and viewing results. Backend integration will be added later.</p>
+
+            <h3>Key Features (Planned)</h3>
+            <ul>
+                <li>Automated scan for common SQL injection patterns</li>
+                <li>Detailed vulnerability reports and remediation steps</li>
+                <li>History and exports of scan results</li>
+                <li>Integration with CI/CD pipelines</li>
+            </ul>
+
+            <h3>Security Notice</h3>
+            <p>Only scan systems you own or have explicit permission to test. Unauthorized scanning may be illegal and unethical.</p>
+
+            <div class="buttons">
+                <button class="btn btn-primary" onclick="window.location.href='home.html'">Go to Home</button>
+                <button class="btn btn-secondary" onclick="window.location.href='results.html'">View Results</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 SQL Injection Scanner</p>
+    </footer>
+
+    <script>
+        function logout() {
+            if (confirm('Logout?')) window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

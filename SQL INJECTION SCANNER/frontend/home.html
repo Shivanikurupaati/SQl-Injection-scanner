@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Scanner - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">SQL Injection Scanner</h1>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="welcome-section">
+            <h2>Welcome to SQL Injection Scanner</h2>
+            <p>Enter your database URLs and we'll scan them for SQL injection vulnerabilities</p>
+        </div>
+
+        <!-- URL Input Section -->
+        <div class="scanner-section">
+            <div class="input-box">
+                <h3>Add URLs for Scanning</h3>
+                
+                <div class="form-group">
+                    <label for="urlInput">Enter URL</label>
+                    <input type="url" id="urlInput" placeholder="https://example.com" required>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="addURL()">Add URL</button>
+                    <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- URLs List Section -->
+        <div class="urls-section">
+            <h3>URLs to Scan</h3>
+            <div id="urlsList" class="urls-list">
+                <p class="empty-message">No URLs added yet. Add a URL above to get started.</p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-scan" onclick="scanAllURLs()">Scan All URLs</button>
+                <button class="btn btn-clear" onclick="clearAllURLs()">Clear All</button>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <h4>URLs Added</h4>
+                <p id="urlCount" class="stat-number">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Total Scans</h4>
+                <p class="stat-number">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Issues Found</h4>
+                <p class="stat-number">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 SQL Injection Scanner. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

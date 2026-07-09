@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Scanner - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>SQL Injection Scanner</h1>
+            <p class="subtitle">Secure Your Database</p>
+            
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn btn-login">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                <p><a href="#">Forgot password?</a></p>
+            </div>
+        </div>
+
+        <div class="login-info">
+            <h2>Welcome</h2>
+            <p>Protect your applications from SQL injection attacks with our advanced scanning tool.</p>
+            <ul>
+                <li>✓ Real-time vulnerability detection</li>
+                <li>✓ Comprehensive analysis reports</li>
+                <li>✓ Easy-to-use interface</li>
+                <li>✓ Secure and reliable</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* Basic styles copied from login layout for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; width: 100%; padding: 20px; }
+.login-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.login-box h1 { margin-bottom: 8px; }
+.login-box .subtitle { color: #666; margin-bottom: 20px; }
+.form-group { margin-bottom: 14px; }
+label { display:block; margin-bottom:6px; font-weight:600; }
+input[type="text"], input[type="email"], input[type="password"] { width:100%; padding:10px 12px; border-radius:6px; border:1px solid #ddd; }
+.btn { display:inline-block; padding:10px 18px; border-radius:8px; border:none; cursor:pointer; background:#667eea; color:white; font-weight:600; }
+.login-footer { text-align:center; margin-top:12px; border-top:1px solid #f0f0f0; padding-top:16px; }
+.login-info { color: white; padding: 40px; }
